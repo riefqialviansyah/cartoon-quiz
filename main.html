@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+
+  <!-- style pindah ke css/style.css -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Tebak Gambar</title>
+</head>
+
+<body>
+  <div class="container-main">
+
+    <!-- section header -->
+    <div class="header">
+      <h1>Tebak Gambar!!!</h1>
+      <p>created by: riefqialviansyah | github : <a href="https://github.com/riefqialviansyah">riefqialviansyah</a></p>
+    </div>
+    <!-- section header end -->
+
+    <!-- section main -->
+    <div id="main" class="main" style="grid-area: main;">
+      <div id="img-quiz" class="img-quiz"></div>
+      <div class="question">
+        <p id="question"></p>
+      </div>
+      <div id="options-answer" class="options-answer">
+        <input type="button" name="" id="pilihan1" value="">
+        <input type="button" name="" id="pilihan2" value="">
+        <input type="button" name="" id="pilihan3" value="">
+      </div>
+    </div>
+    <!-- section main end -->
+    
+    <!-- game berakhir dan input nama user -->
+    <div id="gameBerakhir" class="gameBerakhir" style="display: none ;">
+      <h1>Game Over</h1>
+      <div class="inputUser">
+        <label for="userName">Nama: </label>
+        <input id="userName" type="text" placeholder="masukkan nama kamu">
+      </div>
+      <button id="mainLagi">Cek Score & Play Again</button>
+    </div>
+    
+    <!-- section score -->
+    <div class="score">
+      <div class="judul-score">Leader Board</div>
+      <div id="leaderBoard" class="leader-board">
+        <div style="display: flex; justify-content: space-between;">
+        </div>
+      </div>
+    </div>
+    <!-- section score end -->
+
+    <!-- option menu -->
+    <div class="option">
+      <button id="tambahSoal">Tambah Soal</button>
+      <button id="hapusSoal">Hapus Soal</button>
+      <button>Edit Soal</button>
+      <button>Kritik & Saran</button>
+    </div>
+
+    <!-- tambah soal -->
+    <div id="boxTambahSoal" class="tambahSoal sembunyi">
+      <ul>
+        <li>
+          <label for="linkInput">Link Gambar: </label>
+          <input type="text" name="" id="linkInput" value="https://cdn.idntimes.com/content-images/post/20171113/ma-2-01b3867b5cebf595c3e31c37c31dfc55.jpg">
+        </li>
+        <li>
+          <label for="pertanyaanInput">Pertanyaan: </label>
+          <input type="text" name="" id="pertanyaanInput" value="Apakah nama hewan tersebut?">
+        </li>
+        <li>
+          <label for="jawabanInput1">Pilihan Jawaban 1: </label>
+          <input type="text" name="" id="jawabanInput1" value="Harimau">
+        </li>
+        <li>
+          <label for="jawabanInput2">Pilihan Jawaban 2: </label>
+          <input type="text" name="" id="jawabanInput2" value="Macan">
+        </li>
+        <li>
+          <label for="jawabanInput3">Pilihan Jawaban 3: </label>
+          <input type="text" name="" id="jawabanInput3" value="Marsupilami">
+        </li>
+        <li>
+          <label for="jawabanBenarInput">Jawaban Benar:</label>
+          <input type="text" name="" id="jawabanBenarInput" value="Marsupilami">
+        </li>
+        <button id="simpanSoal">Simpan</button>
+      </ul>
+    </div>
+    <!-- tambah soal end -->
+
+    <div id="boxHapusSoal" class="hapusSoal sembunyi">
+      <h1>Hapus Soal</h1>
+      <div id="listSoal"></div>
+    </div>
+    <script src="script/script.js"></script>
+  </div>
+
+</body>
+</html>
